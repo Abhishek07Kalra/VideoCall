@@ -2,9 +2,6 @@ const socket = io('/');
 const peer = new Peer();
 let myVideoStream;
 let myId;
-document.getElementById('button').addEventListener('click' , ()=>{
-    location.href = "https://www.google.com";
-})
 var videoGrid = document.getElementById('videoDiv')
 var myvideo = document.createElement('video');
 myvideo.muted = true;
