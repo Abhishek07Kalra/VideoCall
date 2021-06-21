@@ -21,6 +21,11 @@ navigator.mediaDevices.getUserMedia({
     call.on('error' , (err)=>{
       alert(err)
     })
+    call.on("close", () => {
+        console.log(vid);
+        vid.remove();
+    })
+    peerConnections[call.peer] = call;
   })
 }).catch(err=>{
     alert(err.message)
