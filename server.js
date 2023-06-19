@@ -14,7 +14,7 @@ app.use(express.static('public'))
 app.get('/' , (req,res)=>{
   res.send(uuidv4());
 });
-app.get('/:room' , (req,res)=>{
+app.get('/' , (req,res)=>{
     res.render('index' , {RoomId:req.params.room});
 });
 io.on("connection" , (socket)=>{
